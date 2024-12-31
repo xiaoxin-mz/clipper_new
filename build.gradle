@@ -1,16 +1,16 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.4'
+// // Top-level build file where you can add configuration options common to all sub-projects/modules.
+// buildscript {
+//     repositories {
+//         google()
+//         mavenCentral()
+//     }
+//     dependencies {
+//         classpath 'com.android.tools.build:gradle:8.1.4'
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
-}
+//         // NOTE: Do not place your application dependencies here; they belong
+//         // in the individual module build.gradle files
+//     }
+// }
 
 plugins {
     id 'application' 
@@ -24,6 +24,17 @@ java {
 
 application {
     mainClass = 'ca.zgrs.clipper.Main'
+}
+
+dependencies {
+
+	// Core
+	implementation("androidx.core:core-ktx:1.13.1")
+	// implementation(fileTree("include" to arrayOf("*.jar", "*.aar"), "dir" to "libs"))
+	implementation("androidx.preference:preference:1.2.1")
+	implementation("androidx.appcompat:appcompat:1.7.0")
+	implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+	implementation("com.google.android.material:material:1.12.0")
 }
 
 // allprojects {
