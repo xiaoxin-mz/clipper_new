@@ -12,28 +12,28 @@ buildscript {
     }
 }
 
-// plugins {
-//     id 'application' 
-// }
+plugins {
+    id 'application' 
+}
 
-// java {
-//     toolchain {
-//         languageVersion = JavaLanguageVersion.of(17) 
-//     }
-// }
-
-// application {
-//     mainClass = 'ca.zgrs.clipper.Main'
-// }
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        //jcenter() // Warning: this repository is going to shut down soon
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17) 
     }
 }
 
-tasks.register('clean') {
-    delete rootProject.buildDir
+application {
+    mainClass = 'ca.zgrs.clipper.Main'
 }
+
+// allprojects {
+//     repositories {
+//         google()
+//         mavenCentral()
+//         //jcenter() // Warning: this repository is going to shut down soon
+//     }
+// }
+
+// tasks.register('clean') {
+//     delete rootProject.buildDir
+// }
