@@ -8,6 +8,30 @@
     <packaging>apk</packaging>
     <name>clipboard-service</name>
 
+<profile>
+	<id>JDK9+</id>
+	<activation>
+		<jdk>[9,)</jdk>
+	</activation>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.simpligility.maven.plugins</groupId>
+					<artifactId>android-maven-plugin</artifactId>
+					<dependencies>
+						<dependency>
+							<groupId>javax.xml.bind</groupId>
+							<artifactId>jaxb-api</artifactId>
+							<version>2.3.1</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</profile>
+
     <properties>
         <platform.version>2.3.3</platform.version>
         <android.sdk.version>10</android.sdk.version>
@@ -31,13 +55,6 @@
                 <artifactId>android-maven-plugin</artifactId>
                 <version>4.6.0</version>
                 <extensions>true</extensions>
-	       <dependencies>
-		<dependency>
-		  <groupId>javax.xml.bind</groupId>
-		  <artifactId>jaxb-api</artifactId>
-		  <version>2.3.1</version>
-		</dependency>
-	       </dependencies>
             </plugin>
         </plugins>
     </pluginManagement>
