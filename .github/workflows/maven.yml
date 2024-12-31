@@ -30,6 +30,8 @@ jobs:
         cache: maven
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
+      with:
+        cmdline-tools-version: 8512546
 ###    - name: Setup OLD Android SDK??
 ###      run: /usr/local/lib/android/sdk/tools/android update sdk --no-ui --obsolete --force
     - name: Build with Maven
