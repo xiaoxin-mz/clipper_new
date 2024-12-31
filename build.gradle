@@ -12,18 +12,6 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        //jcenter() // Warning: this repository is going to shut down soon
-    }
-}
-
-tasks.register('clean') {
-    delete rootProject.buildDir
-}
-
 plugins {
     id 'application' 
 }
@@ -36,4 +24,16 @@ java {
 
 application {
     mainClass = 'ca.zgrs.clipper.Main'
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        //jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+
+tasks.register('clean') {
+    delete rootProject.buildDir
 }
