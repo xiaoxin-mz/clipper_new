@@ -12,19 +12,19 @@ buildscript {
     }
 }
 
-plugins {
-    id 'application' 
-}
+// plugins {
+//     id 'application' 
+// }
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17) 
-    }
-}
+// java {
+//     toolchain {
+//         languageVersion = JavaLanguageVersion.of(17) 
+//     }
+// }
 
-application {
-    mainClass = 'ca.zgrs.clipper.Main'
-}
+// application {
+//     mainClass = 'ca.zgrs.clipper.Main'
+// }
 
 allprojects {
     repositories {
@@ -34,6 +34,6 @@ allprojects {
     }
 }
 
-// tasks.register('clean') {
-//     delete rootProject.buildDir
-// }
+tasks.register('clean') {
+    delete rootProject.buildDir
+}
