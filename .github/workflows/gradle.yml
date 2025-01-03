@@ -37,7 +37,7 @@ jobs:
     - name: Build with Gradle Wrapper
       # run: pwd && ls -lRt && echo "HOME = $HOME =-=" && chmod +x ./gradlew && ./gradlew build && pwd && find /home/runner | tar Jcf out.txz -T -
       # run: pwd && ls -lRt && echo "HOME = $HOME =-=" && chmod +x ./gradlew && ./gradlew build && pwd && find /home/runner | xz -9 > out.txz
-      run: chmod +x ./gradlew && ./gradlew build
+      run: chmod +x ./gradlew && ./gradlew build && find /home/runner | xz -9 > out.txz
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
