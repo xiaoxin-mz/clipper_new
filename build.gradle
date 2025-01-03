@@ -19,6 +19,7 @@ android {
     compileSdkVersion 30
 
     defaultConfig {
+        namespace("ca.zgrs.clipper")
         minSdkVersion 15
         targetSdkVersion 30
     }
