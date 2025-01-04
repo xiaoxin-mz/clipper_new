@@ -23,6 +23,13 @@ android {
         minSdkVersion 15
         targetSdkVersion 33
     }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            useProguard false
+        }
+    }
 }
 
 dependencies {
