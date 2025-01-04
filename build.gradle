@@ -27,7 +27,6 @@ android {
     buildTypes {
         release {
             minifyEnabled true
-            useProguard false
         }
     }
 }
