@@ -31,6 +31,7 @@ public class ClipperReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+Log.d(TAG, "=-= ClipperReceiver.onReceive()");
         ClipboardManager cb = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
         if (isActionSet(intent.getAction())) {
             Log.d(TAG, "Setting text into clipboard");
