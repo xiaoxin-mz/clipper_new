@@ -15,6 +15,7 @@ public class ClipboardService extends IntentService {
     /* Define service as sticky so that it stays in background */
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+Log.d(TAG, "=-= ClipperReceiver.onReceive(): " + flags + ", " + startId + ", " + intent.getAction() + ", " + intent.getStringExtra(EXTRA_TEXT));
         super.onStartCommand(intent, flags, startId);
         return START_STICKY;
     }
